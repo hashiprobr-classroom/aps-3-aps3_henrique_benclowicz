@@ -15,11 +15,11 @@ public class Jogo {
         this.avaliacoes = new HashMap<>();
     }
 
-    public void addAvaliacao(String apelido, int avaliacao){
+    public void avalia(String apelido, int avaliacao){
         avaliacoes.put(apelido,avaliacao);
     }
 
-    public double mediaAvaliacao(){
+    public double media(){
         double soma = 0;
         if (avaliacoes.isEmpty()){
             return 0;
@@ -32,7 +32,7 @@ public class Jogo {
         }
     }
 
-    public boolean isInAvaliacoes(String apelido){
+    public boolean avaliado(String apelido){
         if (avaliacoes.containsKey(apelido)){
             return true;
         }

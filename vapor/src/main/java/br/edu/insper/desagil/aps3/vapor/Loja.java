@@ -12,11 +12,11 @@ public class Loja {
         this.jogos = jogos;
     }
 
-    public int avaliados(Usuario usuario){
+    public int numeroAvaliados(Usuario usuario){
         String apelido = usuario.getApelido();
         int soma = 0;
         for (Jogo j : jogos){
-            if (j.isInAvaliacoes(apelido)){
+            if (j.avaliado(apelido)){
                 soma += 1;
             }
         }

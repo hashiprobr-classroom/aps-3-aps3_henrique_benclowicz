@@ -3,12 +3,12 @@ package br.edu.insper.desagil.aps3.vapor;
 import java.util.List;
 
 public abstract class Comunidade {
-    public List<Usuario> usuarios;
+    public List<Usuario> membros;
 
-    public Comunidade(List<Usuario> usuarios){
-        this.usuarios = usuarios;
+    public Comunidade(List<Usuario> membros){
+        this.membros = membros;
     }
-    public void addUsuario(Usuario usuario){
-        usuarios.add(usuario);
+    public void adicionaMembro(Usuario usuario){
+        membros.add(usuario);
     }
 }
