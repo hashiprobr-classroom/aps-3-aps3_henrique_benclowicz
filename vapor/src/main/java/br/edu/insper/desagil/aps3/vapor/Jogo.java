@@ -21,9 +21,31 @@ public class Jogo {
 
     public double mediaAvaliacao(){
         double soma = 0;
-        for (int av : avaliacoes.values()){
-            soma += av;
+        if (avaliacoes.isEmpty()){
+            return 0;
         }
-        return soma/avaliacoes.size();
+        else {
+            for (int av : avaliacoes.values()) {
+                soma += av;
+            }
+            return soma / avaliacoes.size();
+        }
+    }
+
+    public boolean isInAvaliacoes(String apelido){
+        if (avaliacoes.containsKey(apelido)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
