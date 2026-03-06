@@ -6,6 +6,7 @@ public class ComunidadeDeJogo extends Comunidade{
     private Jogo jogo;
     public ComunidadeDeJogo(Jogo jogo, List<Usuario> usuarios){
         super(usuarios);
+        this.jogo = jogo;
 
     }
 
