@@ -26,7 +26,7 @@ public class ComunidadeDeJogoTest {
     }
 
     @Test
-    public void adicionaUmMembro(){
+    public void adicionaDoisInvalidos(){
         comunidade.adicionaMembro(user1);
         comunidade.adicionaMembro(user2);
         List<String> esperado = List.of();
