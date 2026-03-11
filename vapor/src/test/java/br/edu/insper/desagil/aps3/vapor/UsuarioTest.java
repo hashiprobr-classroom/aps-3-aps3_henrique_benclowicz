@@ -15,13 +15,13 @@ public class UsuarioTest {
     }
 
     @Test
-    public void constroi(){
+    void constroi(){
         assertEquals("Benclo", usuario.getApelido());
         assertEquals("Henrique Benclowicz", usuario.getNome());
     }
 
     @Test
-    public void mudaNome(){
+    void mudaNome(){
         usuario.setNome("Daniel");
         assertEquals("Daniel", usuario.getNome());
     }

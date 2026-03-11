@@ -18,7 +18,7 @@ public class LojaTest {
     private Jogo r6;
 
     @BeforeEach
-    public void setUp(){
+    void setUp(){
 
         dono = new Usuario("Benclo","Henrique Benclowicz");
         user = new Usuario("Dani", "Daniel Gozzi");
@@ -36,26 +36,26 @@ public class LojaTest {
     }
 
     @Test
-    public void constroi(){
+    void constroi(){
         assertEquals(dono, loja.getDono());
         assertEquals(0,loja.numeroAvaliados(dono));
     }
 
     @Test
-    public void umUsuarioAvaliaUmJogo(){
+    void umUsuarioAvaliaUmJogo(){
         rl.avalia(dono.getApelido(),10);
         assertEquals(1,loja.numeroAvaliados(dono));
     }
 
     @Test
-    public void umUsuarioAvaliaDoisJogos(){
+    void umUsuarioAvaliaDoisJogos(){
         rl.avalia(dono.getApelido(),10);
         cs.avalia(dono.getApelido(),10);
         assertEquals(2,loja.numeroAvaliados(dono));
     }
 
     @Test
-    public void doisUsuariosAvaliamUmJogo(){
+    void doisUsuariosAvaliamUmJogo(){
         rl.avalia(dono.getApelido(),10);
         rl.avalia(user.getApelido(),10);
         assertEquals(1,loja.numeroAvaliados(dono));
@@ -63,7 +63,7 @@ public class LojaTest {
     }
 
     @Test
-    public void doisUsuariosAvaliamDoisJogos(){
+    void doisUsuariosAvaliamDoisJogos(){
         rl.avalia(dono.getApelido(),10);
         r6.avalia(user.getApelido(),10);
         assertEquals(1,loja.numeroAvaliados(dono));

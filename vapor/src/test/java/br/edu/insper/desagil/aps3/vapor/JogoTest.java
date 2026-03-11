@@ -11,19 +11,19 @@ public class JogoTest {
     private static final double DELTA = 0.01;
 
     @BeforeEach
-    public void setUp(){
+    void setUp(){
         jogo = new Jogo(1,"Rocket League");
     }
 
     @Test
-    public void constroi(){
+    void constroi(){
         assertEquals(1, jogo.getId());
         assertEquals("Rocket League", jogo.getNome());
         assertEquals(0, jogo.media(),DELTA);
     }
 
     @Test
-    public void avaliaUmaVez(){
+    void avaliaUmaVez(){
         jogo.avalia("Benclo",3);
         assertEquals(3, jogo.media(),DELTA);
         assertTrue(jogo.avaliado("Benclo"));
@@ -31,7 +31,7 @@ public class JogoTest {
     }
 
     @Test
-    public void avaliaDuasVezes(){
+    void avaliaDuasVezes(){
         jogo.avalia("Benclo",3);
         jogo.avalia("Daniel",4);
         assertEquals(3.5, jogo.media(),DELTA);
@@ -40,7 +40,7 @@ public class JogoTest {
     }
 
     @Test
-    public void avaliaTresVezes(){
+    void avaliaTresVezes(){
         jogo.avalia("Benclo",3);
         jogo.avalia("Daniel",4);
         jogo.avalia("Benclo",5);

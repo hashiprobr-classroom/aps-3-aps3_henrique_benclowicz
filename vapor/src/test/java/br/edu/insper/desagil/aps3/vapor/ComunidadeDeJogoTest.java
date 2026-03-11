@@ -26,7 +26,7 @@ public class ComunidadeDeJogoTest {
     }
 
     @Test
-    public void adicionaDoisInvalidos(){
+    void adicionaDoisInvalidos(){
         comunidade.adicionaMembro(user1);
         comunidade.adicionaMembro(user2);
         List<String> esperado = List.of();
@@ -34,7 +34,7 @@ public class ComunidadeDeJogoTest {
     }
 
     @Test
-    public void adicionaUmInvalido(){
+    void adicionaUmInvalido(){
         jogo.avalia("Benclo",10);
         comunidade.adicionaMembro(user1);
         comunidade.adicionaMembro(user2);
@@ -43,7 +43,7 @@ public class ComunidadeDeJogoTest {
     }
 
     @Test
-    public void adicionaDoisValidos(){
+    void adicionaDoisValidos(){
         jogo.avalia("Benclo",10);
         jogo.avalia("Dani",10);
         comunidade.adicionaMembro(user1);
